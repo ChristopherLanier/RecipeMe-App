@@ -32,7 +32,7 @@ public class DairyFreeController {
         return (Collection<DairyFree>) dairyFreeRepo.findByDifficultyLevel(difficultyLevel.toLowerCase()); }
 
 
-
+    //GetMapping annotation is a Rest API endpoint to be retrieved by a request from front-end
     @GetMapping("/recipes/dairy-free/meal/{mealType}")
     public Collection<DairyFree> getDairyFreeRecipesByMealType(@PathVariable String mealType) {
         return (Collection<DairyFree>) dairyFreeRepo.findByMealType(mealType.toLowerCase()); }
